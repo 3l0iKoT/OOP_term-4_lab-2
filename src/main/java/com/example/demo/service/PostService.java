@@ -9,9 +9,9 @@ import java.util.*;
 public class PostService {
     public List<Post> listAllPosts() {
         List<Post> posts = new ArrayList<>();
-        posts.add(new Post("Это первый пост! Привет!"));
-        posts.add(new Post("Я сдал комиссию по ООП!"));
-        posts.add(new Post("Как дела?"));
+        posts.add(new Post("Это первый пост! Привет!", new Date()));
+        posts.add(new Post("Я сдал комиссию по ООП!", new Date()));
+        posts.add(new Post("Как дела?", new Date()));
         return posts;
     }
 }
