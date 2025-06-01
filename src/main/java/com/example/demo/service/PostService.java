@@ -10,9 +10,9 @@ public class PostService {
     private List<Post> posts = new ArrayList<>();
 
     {
-        posts.add(new Post("Это первый пост! Привет!", new Date()));
-        posts.add(new Post("Я сдал комиссию по ООП!", new Date()));
-        posts.add(new Post("Как дела?", new Date()));
+        posts.add(new Post((long) posts.size(), "Это первый пост! Привет!", new Date()));
+        posts.add(new Post((long) posts.size(), "Я сдал комиссию по ООП!", new Date()));
+        posts.add(new Post((long) posts.size(), "Как дела?", new Date()));
     }
 
     public List<Post> listAllPosts() {
@@ -20,6 +20,6 @@ public class PostService {
     }
 
     public void create(String text) {
-        posts.add(new Post(text, new Date()));
+        posts.add(new Post((long) posts.size(),text, new Date()));
     }
 }
